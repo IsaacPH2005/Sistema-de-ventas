@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in | sign Up</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="#">
+                <h1>Crea una cuenta</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="icon"><i class="bx bxl-google"></i></a>
+                    <a href="#" class="icon"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" class="icon"><i class="bx bxl-github"></i></a>
+                </div>
+                <samp>or use your email for registration</samp>
+                <input type="text" placeholder="Nombre" id="newUsuario" />
+                <input type="email" placeholder="Correo" id="newEmail" />
+                <input type="password" placeholder="Contraseña" id="newPassword" />
+                <button onclick="crearUsuario()">Inscribirse</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="#" autocomplete="off">
+                <h1>Iniciar sesión</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="icon"><i class="bx bxl-google"></i></a>
+                    <a href="#" class="icon"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" class="icon"><i class="bx bxl-github"></i></a>
+                </div>
+                <samp>o utilice su contraseña de correo electrónico</samp>
+                <input type="email" placeholder="Email" id="email" />
+                <input type="password" placeholder="Password" id="pass" />
+                <a href="#" class="fp">¿Contraseña olvidada?</a>
+                <button type="button" class="inicio-temporal" onclick="validar()"> Iniciar sesión</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>¡Bienvenido de nuevo!</h1>
+                    <p>Ingrese sus datos personales para utilizar todas las funciones del sitio</p>
+                    <button class="hidden" id="login">Iniciar sesión</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hola amigo!</h1>
+                    <p>
+                        Regístrese con sus datos personales para utilizar todas las funciones del sitio
+                    </p>
+                    <button class="hidden" id="register">Inscribirse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/alertas.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

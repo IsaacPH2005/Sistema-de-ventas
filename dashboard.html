@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon"
+        href="https://www.zarla.com/images/zarla-logro-comercial-1x1-2400x2400-20220202-7w7qqqj9kt4ppw67yytt.png?crop=1:1,smart&width=250&dpr=2"
+        type="image/x-icon">
+    <title>INICIO</title>
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg bg-dark-subtle">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img
+                    src="https://companieslogo.com/img/orig/VTR_BIG-04ba892c.png?t=1648159348" alt="" width="130px"
+                    height="50px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboard.html"><i class="fas fa-home"
+                                style="font-size: 20px;"></i> INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="productos-lista.html"><i class="fab fa-product-hunt"
+                                style="font-size: 20px;"></i> PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proveedores-lista.html"><i class="fas fa-user-tie"
+                                style="font-size: 20px;"></i> PROVEEDORES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clientes-lista.html"><i class="fas fa-users"
+                                style="font-size: 20px;"></i> CLIENTES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="compras-lista.html"><i class="fas fa-cash-register"
+                                style="font-size: 20px;"></i> COMPRAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ventas-lista.html"><i class="fas fa-shopping-bag"
+                                style="font-size: 20px;"></i> VENTAS</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="flase"><img
+                                src="https://img.freepik.com/vector-premium/icono-circulo-usuario-anonimo-ilustracion-vector-estilo-plano-sombra_520826-1931.jpg"
+                                alt="" width="40px" height="40px" class="rounded-circle" id="Usuario" />
+                            <span id="usuario2"></span></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a href="ver-perfil.html" class="dropdown-item">Ver perfil</a>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item" onclick="cerrarSesion()">Cerrar
+                                    sesión</button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 col-md-3 mt-3">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <div class="col-12 col-md-7">
+                                <span class="h5">Total Clientes <b id="totalClientes"></b></span>
+                            </div>
+                            <div class="col-12 col-md-5">
+                                <i class="fas fa-users display-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mt-3">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <div class="col-12 col-md-7">
+                                <span class="h5">Total Productos <b id="totalProductos"></b></span>
+                            </div>
+                            <div class="col-12 col-md-5">
+                                <i class="fas fa-cubes display-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mt-3">
+                <div class="card bg-warning text-white">
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <div class="col-12 col-md-7">
+                                <span class="h5">Total Compras <b id="totalCompras"></b></span>
+                            </div>
+                            <div class="col-12 col-md-5">
+                                <i class="fas fa-cart-plus display-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mt-3">
+                <div class="card bg-secondary text-white">
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <div class="col-12 col-md-7">
+                                <span class="h5">Total Ventas <b id="totalVentas"></b></span>
+                            </div>
+                            <div class="col-12 col-md-5">
+                                <i class="fas fa-cash-register display-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 col-md-6 mt-3">
+                <div class="card border-0 bg-info-subtle">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush" id="masVendidos">
+                            <li class="list-group-item list-group-item-info">
+                                <i class="fas fa-shopping-cart me-2"></i>Productos mas vendidos
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                                Celular
+                                <span class="badge text-bg-primary rounded-pill">5</span>
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                                Televisor
+                                <span class="badge text-bg-primary rounded-pill">10</span>
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                                Lavadora
+                                <span class="badge text-bg-primary rounded-pill">2</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mt-3">
+                <div class="card bg-danger-subtle">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">
+                            Estadisticas
+                        </h4>
+                        <i class="fas fa-chart-pie text-danger" style="font-size: 17vw;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/alertas.js"></script>
+    <script src="js/cargarPerfil.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
